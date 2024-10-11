@@ -1,0 +1,390 @@
+<html><head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Your Profile - SocialSphere</title>
+<style>
+  body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    background-color: #f0f2f5;
+  }
+  header {
+    background-color: #1877f2;
+    color: white;
+    padding: 10px 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+  }
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+  .logo {
+    font-size: 24px;
+    font-weight: bold;
+  }
+  .nav-links a {
+    color: white;
+    text-decoration: none;
+    margin-left: 20px;
+  }
+  .container {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 0 20px;
+  }
+  .profile-header {
+    background-color: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    margin-bottom: 20px;
+  }
+  .cover-photo {
+    height: 300px;
+    background-image: url('cover-photo.jpg');
+    background-size: cover;
+    background-position: center;
+    position: relative;
+  }
+  .profile-picture {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    border: 5px solid white;
+    position: absolute;
+    bottom: -50px;
+    left: 50px;
+  }
+  .profile-info {
+    padding: 60px 20px 20px;
+  }
+  .profile-name {
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+  .profile-tagline {
+    color: #65676b;
+    font-size: 16px;
+    margin-bottom: 15px;
+  }
+  .profile-stats {
+    display: flex;
+    gap: 20px;
+  }
+  .stat {
+    font-size: 14px;
+    color: #65676b;
+  }
+  .stat strong {
+    color: #1c1e21;
+  }
+  .profile-actions {
+    display: flex;
+    gap: 10px;
+    margin-top: 20px;
+  }
+  .profile-actions button {
+    padding: 8px 16px;
+    border: none;
+    border-radius: 6px;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  .edit-profile {
+    background-color: #e4e6eb;
+    color: #050505;
+  }
+  .add-story {
+    background-color: #1877f2;
+    color: white;
+  }
+  .content-grid {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 20px;
+  }
+  .about-section, .posts-section {
+    background-color: white;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  }
+  .section-title {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 15px;
+  }
+  .about-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+  .about-item svg {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+  }
+  .post {
+    border-bottom: 1px solid #e4e6eb;
+    padding-bottom: 15px;
+    margin-bottom: 15px;
+  }
+  .post:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+  }
+  .post-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+  .post-avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+  }
+  .post-meta {
+    font-size: 14px;
+  }
+  .post-meta strong {
+    display: block;
+  }
+  .post-meta span {
+    color: #65676b;
+  }
+  .post-content {
+    margin-bottom: 10px;
+  }
+  .post-image {
+    width: 100%;
+    border-radius: 8px;
+    margin-bottom: 10px;
+  }
+  .post-actions {
+    display: flex;
+    justify-content: space-between;
+  }
+  .action-btn {
+    background: none;
+    border: none;
+    color: #65676b;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+  }
+  .action-btn svg {
+    width: 16px;
+    height: 16px;
+    margin-right: 5px;
+  }
+</style>
+</head>
+<body>
+  <header>
+    <nav>
+      <div class="logo">SocialSphere</div>
+      <div class="nav-links">
+        <a href="home.html"
+        <a href="profile.html"
+        <a href="message.html"
+        <a href="notification.html"
+      </div>
+    </nav>
+  </header>
+
+  <div class="container">
+    <div class="profile-header">
+      <div class="cover-photo">
+        <img src="i8.jfif" alt="Your profile picture" class="profile-picture" width="180" height="180">
+      </div>
+      <div class="profile-info">
+        <h1 class="profile-name">sahara quila</h1>
+        <p class="profile-tagline">oa| palaging gutom | walay kwarta</p>
+        <div class="profile-stats">
+          <span class="stat"><strong>500</strong> Friends</span>
+          <span class="stat"><strong>200</strong> Followers</span>
+          <span class="stat"><strong>50</strong> Posts</span>
+        </div>
+        <div class="profile-actions">
+          <button class="edit-profile">Edit Profile</button><a></a>
+          <button class="add-story">Add to Story</button><a></a>
+        </div>
+      </div>
+    </div>
+
+    <div class="content-grid">
+      <div class="about-section">
+        <h2 class="section-title">About</h2>
+        <div class="about-item">
+          <svg viewBox="0 0 24 24" fill="currentColor">
+            <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
+          </svg>
+          <span>Lives in New York, NY</span>
+        </div>
+        <div class="about-item">
+          <svg viewBox="0 0 24 24" fill="currentColor">
+            <path d="M20 6h-4V4c0-1.11-.89-2-2-2h-4c-1.11 0-2 .89-2 2v2H4c-1.11 0-1.99.89-1.99 2L2 19c0 1.11.89 2 2 2h16c1.11 0 2-.89 2-2V8c0-1.11-.89-2-2-2zm-6 0h-4V4h4v2z"/>
+          </svg>
+          <span>Works at Tech Innovations Inc.</span>
+        </div>
+        <div class="about-item">
+          <svg viewBox="0 0 24 24" fill="currentColor">
+            <path d="M12 11.55C9.64 9.35 6.48 8 3 8v11c3.48 0 6.64 1.35 9 3.55 2.36-2.19 5.52-3.55 9-3.55V8c-3.48 0-6.64 1.35-9 3.55zM12 8c1.66 0 3-1.34 3-3s-1.34-3-3-3-3 1.34-3 3 1.34 3 3 3z"/>
+          </svg>
+          <span>Studied Computer Science at NYU</span>
+        </div>
+      </div>
+
+      <div class="posts-section">
+        <h2 class="section-title">Posts</h2>
+        <div class="post">
+          <div class="post-header">
+            <img src="r4.jfif" alt="Alex's avatar" class="post-avatar" width="40" height="40">
+            <div class="post-meta">
+              <strong>mama</strong>
+              <span>2 hours ago</span>
+            </div>
+          </div>
+          <div class="post-content">
+            <p>kakatapos lang malibang 🏞️</p>
+            <img src="r4.jfif" alt="bahog lubot" class="post-image" width="100%" height="auto">
+          </div>
+          <div class="post-actions">
+            <button class="action-btn">
+              <svg viewBox="0 0 24 24" fill="currentColor">
+                <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+              </svg>
+              Like
+            </button><a></a>
+            <button class="action-btn">
+              <svg viewBox="0 0 24 24" fill="currentColor">
+                <path d="M21.99 4c0-1.1-.89-2-1.99-2H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h14l4 4-.01-18z"/>
+              </svg>
+              Comment
+            </button><a></a>
+            <button class="action-btn">
+              <svg viewBox="0 0 24 24" fill="currentColor">
+                <path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81 1.66 0 3-1.34 3-3s-1.34-3-3-3-3 1.34-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9c-1.66 0-3 1.34-3 3s1.34 3 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.16c-.05.21-.08.43-.08.65 0 1.61 1.31 2.92 2.92 2.92 1.61 0 2.92-1.31 2.92-2.92s-1.31-2.92-2.92-2.92z"/>
+              </svg>
+              Share
+            </button><a></a>
+          </div>
+        </div>
+        <div class="post">
+          <div class="post-header">
+            <img src="u7.jfif" alt="mac's avatar" class="post-avatar" width="40" height="40">
+            <div class="post-meta">
+              <strong>mac</strong>
+              <span>1 day ago</span>
+            </div>
+          </div>
+          <div class="post-content">
+            <p>Excited to announce that I'll be speaking at the upcoming Tech Conference in San Francisco! Who else is attending? 🎤💻</p>
+          </div>
+          <div class="post-actions">
+            <button></button><a></a> class="action-btn">
+              <svg viewBox="0 0 24 24" fill="currentColor">
+                <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+              </svg>
+              Like
+            </button><a></a>
+            <button class="action-btn"><a>
+              <svg viewBox="0 0 24 24" fill="currentColor">
+                <path d="M21.99 4c0-1.1-.89-2-1.99-2H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h14l4 4-.01-18z"/>
+              </svg>
+              Comment
+            </button><a></a>
+            <button class="action-btn">
+              <svg viewBox="0 0 24 24" fill="currentColor">
+                <path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81 1.66 0 3-1.34 3-3s-1.34-3-3-3-3 1.34-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9c-1.66 0-3 1.34-3 3s1.34 3 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.16c-.05.21-.08.43-.08.65 0 1.61 1.31 2.92 2.92 2.92 1.61 0 2.92-1.31 2.92-2.92s-1.31-2.92-2.92-2.92z"/>
+              </svg>
+              Share
+            </button><a></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const editProfileBtn = document.querySelector('.edit-profile');
+      const addStoryBtn = document.querySelector('.add-story');
+      const actionBtns = document.querySelectorAll('.action-btn');
+
+      editProfileBtn.addEventListener('click', function() {
+        alert('Edit profile functionality coming soon!');
+      });
+
+      addStoryBtn.addEventListener('click', function() {
+        alert('Add to story functionality coming soon!');
+      });
+
+      actionBtns.forEach(btn => {
+        btn.addEventListener('click', function() {
+          const action = this.textContent.trim();
+          alert(`${action} functionality coming soon!`);
+        });
+      });
+
+      // Simulate new post after 15 seconds
+      setTimeout(() => {
+        const newPost = document.createElement('div');
+        newPost.className = 'post';
+        newPost.innerHTML = `
+          <div class="post-header">
+            <img src="profile-picture.jpg" alt="Alex's avatar" class="post-avatar" width="40" height="40">
+            <div class="post-meta">
+              <strong>Alex Johnson</strong>
+              <span>Just now</span>
+            </div>
+          </div>
+          <div class="post-content">
+            <p>Just got my hands on the latest tech gadget! Can't wait to try it out and share my thoughts. Stay tuned for a review! 📱✨</p>
+          </div>
+          <div class="post-actions">
+            <button class="action-btn">
+              <svg viewBox="0 0 24 24" fill="currentColor">
+                <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+              </svg>
+              Like
+            </button><a>
+            <button class="action-btn">
+              <svg viewBox="0 0 24 24" fill="currentColor">
+                <path d="M21.99 4c0-1.1-.89-2-1.99-2H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h14l4 4-.01-18z"/>
+              </svg>
+              Comment
+            </button><a>
+            <button class="action-btn">
+              <svg viewBox="0 0 24 24" fill="currentColor">
+                <path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81 1.66 0 3-1.34 3-3s-1.34-3-3-3-3 1.34-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9c-1.66 0-3 1.34-3 3s1.34 3 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.16c-.05.21-.08.43-.08.65 0 1.61 1.31 2.92 2.92 2.92 1.61 0 2.92-1.31 2.92-2.92s-1.31-2.92-2.92-2.92z"/>
+              </svg>
+              Share
+            </button><a>
+          </div>
+        `;
+        const postsSection = document.querySelector('.posts-section');
+        postsSection.insertBefore(newPost, postsSection.children[1]);
+
+        // Add event listeners to new post's action buttons
+        newPost.querySelectorAll('.action-btn').forEach(btn => {
+          btn.addEventListener('click', function() {
+            const action = this.textContent.trim();
+            alert(`${action} functionality coming soon!`);
+          });
+        });
+      }, 15000);
+    });
+  </script>
+</body></html>

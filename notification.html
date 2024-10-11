@@ -1,0 +1,208 @@
+<html><head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Notifications - SocialSphere</title>
+<style>
+  body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    background-color: #f0f2f5;
+  }
+  header {
+    background-color: #1877f2;
+    color: white;
+    padding: 10px 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+  }
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+  .logo {
+    font-size: 24px;
+    font-weight: bold;
+  }
+  .nav-links a {
+    color: white;
+    text-decoration: none;
+    margin-left: 20px;
+  }
+  .container {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  h1 {
+    color: #1877f2;
+    margin-bottom: 20px;
+  }
+  .notification {
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    border-bottom: 1px solid #e4e6eb;
+    transition: background-color 0.3s;
+  }
+  .notification:last-child {
+    border-bottom: none;
+  }
+  .notification:hover {
+    background-color: #f7f8fa;
+  }
+  .notification-avatar {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 15px;
+  }
+  .notification-content {
+    flex-grow: 1;
+  }
+  .notification-text {
+    margin-bottom: 5px;
+  }
+  .notification-time {
+    font-size: 12px;
+    color: #65676b;
+  }
+  .notification-action {
+    background-color: #e7f3ff;
+    color: #1877f2;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s;
+  }
+  .notification-action:hover {
+    background-color: #dbe7f2;
+  }
+  .unread {
+    background-color: #e7f3ff;
+  }
+  .unread-dot {
+    width: 10px;
+    height: 10px;
+    background-color: #1877f2;
+    border-radius: 50%;
+    margin-right: 10px;
+  }
+</style>
+</head>
+<body>
+  <header>
+    <nav>
+      <div class="logo">SocialSphere</div>
+      <div class="nav-links">
+        <a href="home.html"
+        <a href="profile.html"
+        <a href="message.html"
+        <a href="notification.html"
+      </div>
+    </nav>
+  </header>
+
+  <div class="container">
+    <h1>Notifications</h1>
+    <div class="notification unread">
+      <div class="unread-dot"></div>
+      <img src="r4.jfif" alt="wang wang's avatar" class="notification-avatar" width="50" height="50">
+      <div class="notification-content">
+        <div class="notification-text"><strong>wang wang</strong> liked your post about climate change.</div>
+        <div class="notification-time">2 minutes ago</div>
+      </div>
+      <button class="notification-action">View Post</button>
+    </div>
+    <div class="notification unread">
+      <div class="unread-dot"></div>
+      <img src="i8.jfif" alt="Johns's avatar" class="notification-avatar" width="50" height="50">
+      <div class="notification-content">
+        <div class="notification-text"><strong>John </strong> commented on your photo.</div>
+        <div class="notification-time">15 minutes ago</div>
+      </div>
+      <button class="notification-action">View Comment</button><a></a>
+    </div>
+    <div class="notification">
+      <img src="o9.jfif" alt="ing ing's avatar" class="notification-avatar" width="50" height="50">
+      <div class="notification-content">
+        <div class="notification-text"><strong>ing</strong> invited you to her event "Summer BBQ".</div>
+        <div class="notification-time">1 hour ago</div>
+      </div>
+      <button class="notification-action">View Event</button>
+    </div>
+    <div class="notification">
+      <img src="r4.jfif" alt="arlat's avatar" class="notification-avatar" width="50" height="50">
+      <div class="notification-content">
+        <div class="notification-text"><strong>arlat</strong> tagged you in a post.</div>
+        <div class="notification-time">3 hours ago</div>
+      </div>
+      <button class="notification-action">View Tag</button>
+    </div>
+    <div class="notification">
+      <img src="w2.jfif" alt="pangag" class="notification-avatar" width="50" height="50">
+      <div class="notification-content">
+        <div class="notification-text">Your post reached 1000 likes!</div>
+        <div class="notification-time">Yesterday</div>
+      </div>
+      <button class="notification-action">View Stats</button>
+    </div>
+  </div>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const notifications = document.querySelectorAll('.notification');
+      
+      notifications.forEach(notification => {
+        notification.addEventListener('click', function() {
+          this.classList.remove('unread');
+          this.querySelector('.unread-dot')?.remove();
+        });
+
+        const actionButton = notification.querySelector('.notification-action');
+        actionButton.addEventListener('click', function(e) {
+          e.stopPropagation();
+          alert(`Action: ${this.textContent}`);
+        });
+      });
+
+      // Simulate new notification after 5 seconds
+      setTimeout(() => {
+        const newNotification = document.createElement('div');
+        newNotification.className = 'notification unread';
+        newNotification.innerHTML = `
+          <div class="unread-dot"></div>
+          <img src=t5.jfif" alt="ambot's avatar" class="notification-avatar" width="50" height="50">
+          <div class="notification-content">
+            <div class="notification-text"><strong>Mike Chen</strong> sent you a friend request.</div>
+            <div class="notification-time">Just now</div>
+          </div>
+          <button class="notification-action">Accept</button><a>
+        `;
+        document.querySelector('.container').insertBefore(newNotification, notifications[0]);
+
+        newNotification.addEventListener('click', function() {
+          this.classList.remove('unread');
+          this.querySelector('.unread-dot').remove();
+        });
+
+        newNotification.querySelector('.notification-action').addEventListener('click', function(e) {
+          e.stopPropagation();
+          alert('Friend request accepted!');
+          this.textContent = 'Accepted';
+          this.disabled = true;
+        });
+      }, 5000);
+    });
+  </script>
+</body></html>
